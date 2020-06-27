@@ -15,10 +15,17 @@
 //     showMessage('true');
 // }
 
-let price =28;
+// let price =28;
 
-if( price>10){    
+// if( price>10){    
+//     showMessage('true');
+// }else{
+//     showMessage('false');
+// }
+
+if(1 === "1"){
     showMessage('true');
-}else{
+}
+else{
     showMessage('false');
 }
