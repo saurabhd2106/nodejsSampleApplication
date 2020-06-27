@@ -15,7 +15,10 @@
 //     showMessage('true');
 // }
 
-if( +(1.1 + 1.3).toFixed(2) === 2.4 ){
-    let message = 'Hello';
-    showMessage(message);
+let price =28;
+
+if( price>10){    
+    showMessage('true');
+}else{
+    showMessage('false');
 }
