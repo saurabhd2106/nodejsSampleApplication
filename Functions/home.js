@@ -4,3 +4,7 @@ let myFunction = function loggingFunction (){
 }
 
 myFunction();
+
+showMessage('Hello');
+
+changePercentOff(32)
