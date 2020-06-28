@@ -1,3 +1,5 @@
-const values = ['a','b','c'];
+const  containers =  document.getElementsByClassName('container');
 
-console.log(Array.isArray(values));
+containers[0].classList.add('d-none');
+
+console.log(containers);
