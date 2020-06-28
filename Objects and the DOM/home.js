@@ -2,11 +2,13 @@
 let person = {
     name:'John',
     age:32,
-    partTime:false,
-    showInfo:function(){
-        showMessage(this.name)
-    }
+    partTime:false
 };
 
-person.showInfo();
+function incrementAge(person){
+    person.age++;
+}
 
+incrementAge(person);
+
+showMessage(person.age);
