@@ -1,14 +1,6 @@
+const header = document.getElementById('message');
 
-let person = {
-    name:'John',
-    age:32,
-    partTime:false
-};
+header.style.fontWeight = '100';
 
-function incrementAge(person){
-    person.age++;
-}
 
-incrementAge(person);
-
-showMessage(person.age);
+header.style.color = 'blue';
