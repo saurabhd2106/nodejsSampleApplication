@@ -18,7 +18,10 @@ pipeline {
               }
             }
         }
-        stage('Push') {                 
+       
+    }
+    agent {label 'node-1'}
+     stage('Push') {                 
             steps { 
                 script {
                     withDockerRegistry([credentialsId: "docker-hub", url: "" ]) {        
@@ -38,6 +41,5 @@ pipeline {
                 }
             }
         }
-    }
 
 }
