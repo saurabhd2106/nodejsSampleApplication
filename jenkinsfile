@@ -6,7 +6,7 @@ pipeline {
         stage('Build') {                 
             steps {
                 script {
-                    image = docker.build("saurabh/nodeapp:v02", "--pull -f Dockerfile .")
+                    image = docker.build("saurabhd2106/nodeapp:v02", "--pull -f Dockerfile .")
                 }                
             }
         }   
