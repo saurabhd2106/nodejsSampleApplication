@@ -3,14 +3,14 @@ def image
 pipeline {
     agent any
     stages {
-        stage('Build') {                 
+        stage('Pull Image') {                 
             steps {
                 script {
                     image = docker.build("saurabhd2106/nodeapp:v02", "--pull -f Dockerfile .")
                 }                
             }
         }   
-        stage('Smoke Test') {
+        stage('Run Image') {
             steps {
                 script {
                     container = image.run()
@@ -27,5 +27,17 @@ pipeline {
                 }
             }
         }
+
+        stage('Publish') {                 
+            steps { 
+                script {
+                    withDockerRegistry([credentialsId: "docker-hub", url: "" ]) {        
+                        image.pull()
+                    }
+                    image.run('-p 3000:3000')     
+                }
+            }
+        }
     }
+
 }
